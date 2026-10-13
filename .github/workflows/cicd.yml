@@ -63,7 +63,8 @@ jobs:
         run: |
           mkdir -p site
           ACCURACY=$(python -c "from model import train_model; _, a = train_model(); print(f'{a*100:.2f}%')")
-          sed "s/{{ACCURACY}}/$ACCURACY/" index.html > site/index.html
+          export ACCURACY
+          python -c "import os; from pathlib import Path; html = Path('index.html').read_text(); html = html.replace('{{ACCURACY}}', os.environ['ACCURACY']); Path('site/index.html').write_text(html)"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
