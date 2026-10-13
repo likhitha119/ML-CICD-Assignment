@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML CI/CD Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            text-align: center;
+            padding: 50px 15px;
+        }
+        .card {
+            background: white;
+            max-width: 550px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        h1 { color: #174ea6; }
+        p { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Machine Learning CI/CD Pipeline</h1>
+        <p><b>Model:</b> Random Forest Classifier</p>
+        <p><b>Dataset:</b> Iris Dataset</p>
+        <p><b>Model Accuracy:</b> {{ACCURACY}}</p>
+        <p><b>CI Status:</b> Passed</p>
+        <p><b>CD Status:</b> Successfully deployed</p>
+    </div>
+</body>
+</html>
